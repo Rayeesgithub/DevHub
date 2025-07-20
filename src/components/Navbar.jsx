@@ -15,8 +15,8 @@ const Navbar = () => {
   // const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const logoutHandler = async () => {
-    try {
-      await axios.post(BASE_URL + "/logout");
+    try {  
+      await axios.post(`${BASE_URL}/logout`);
       dispatch(removeUser());
       navigate("/login");
     } catch (err) {
