@@ -9,7 +9,7 @@ const Connections = () => {
   const connections = useSelector((store) => store.connection);
 
   const fetchConnections = async () => {
-    try {
+    try {    
       const result = await axios.get(`${BASE_URL}/user/connection`, {
         withCredentials: true,
       });
