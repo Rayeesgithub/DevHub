@@ -42,7 +42,8 @@ const [imageFile, setImageFile] = useState(user.profileImage || null);
       formData.append("profileImage", imageFile);
     }
     try{
-        const updat=await axios.post(BASE_URL + "/profile/edit",
+        axios.get(`${BASE_URL}/profile/view`)
+        const updat=await axios.post(`${BASE_URL}/profile/view`,
         {
           firstName,
           lastName,
