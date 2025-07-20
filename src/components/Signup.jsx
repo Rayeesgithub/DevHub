@@ -157,8 +157,8 @@ const Signup = () => {
         formDataToSend.append('profileImage', formData.profileImage);
       }
 
-      const res = await axios.post(
-       `${BASE_URL} /signup`,
+     const res = await axios.post(
+        BASE_URL + "/signup",
         formDataToSend,
         {
           withCredentials: true,
