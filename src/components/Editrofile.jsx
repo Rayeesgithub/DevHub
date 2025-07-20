@@ -43,7 +43,7 @@ const [imageFile, setImageFile] = useState(user.profileImage || null);
     }
     try{
         
-        const updat=await axios.post(`${BASE_URL}/profile/edit`,
+         const updat=await axios.post(BASE_URL + "/profile/edit",
         {
           firstName,
           lastName,
