@@ -158,7 +158,7 @@ const Signup = () => {
       }
 
       const res = await axios.post(
-        BASE_URL + "/signup",
+       `${BASE_URL} /signup,
         formDataToSend,
         {
           withCredentials: true,
