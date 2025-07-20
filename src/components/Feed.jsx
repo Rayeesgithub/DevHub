@@ -23,8 +23,8 @@ const Feed = () => {
     setIsLoading(true);
     setError("");
 
-    try {
-      const response = await axios.get(BASE_URL + "/feed", {
+    try {  
+      const response = await axios.get(`${BASE_URL}/feed`, {
         withCredentials: true,
       });
       dispatch(addFeed(response?.data?.data));
