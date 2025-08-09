@@ -4,7 +4,6 @@ import {  useSelector } from 'react-redux';
 import Usercard from './Usercard';
 import { ArrowRight, Users, Github, Zap, Target, Globe, Shield, Rocket, Star, Quote } from 'lucide-react';
 import { Link } from "react-router-dom";
-
 const Home = () => {
   const user = useSelector((store) => store.user);
   const [typedText, setTypedText] = useState('');
@@ -111,7 +110,8 @@ const Home = () => {
                 and build meaningful connections in the tech community.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <Link 
+                
+<Link 
   to="/signup" 
   className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 hover:shadow-lg flex items-center"
 >
