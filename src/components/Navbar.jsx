@@ -15,14 +15,30 @@ const Navbar = () => {
   // const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const logoutHandler = async () => {
-    try {
-      await axios.post(BASE_URL + "/logout", {}, { withCredentials: true });
-      dispatch(removeUser());
-      navigate("/login");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  try {
+    // Call backend logout
+    await axios.post(BASE_URL + "/logout", {}, { withCredentials: true });
+    
+    // Clear Redux state
+    dispatch(removeUser());
+    
+    // Clear any localStorage/sessionStorage if you're using them
+    localStorage.clear();
+    sessionStorage.clear();
+    
+    // Navigate to login
+    navigate("/login");
+    
+    // Optional: Force page reload to clear any cached state
+    // window.location.reload();
+    
+  } catch (err) {
+    console.log(err);
+    // Even if backend call fails, clear frontend state
+    dispatch(removeUser());
+    navigate("/login");
+  }
+};
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
