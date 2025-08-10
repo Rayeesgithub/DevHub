@@ -118,9 +118,9 @@ const Home = () => {
   Get Started
   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
 </Link>
-                <a href="/login" className="px-8 py-4 border-2 border-purple-400 rounded-lg text-lg font-semibold hover:bg-purple-400 hover:text-white transition-all transform hover:scale-105">
+                <Link to="/login" className="px-8 py-4 border-2 border-purple-400 rounded-lg text-lg font-semibold hover:bg-purple-400 hover:text-white transition-all transform hover:scale-105">
                   Login
-                </a>
+                </Link>
               </div>
             </div>
           </div>
